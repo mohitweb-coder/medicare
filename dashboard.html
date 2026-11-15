@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare | Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">✚</span>
+            <span>MediCare</span>
+        </div>
+
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav>
+            <a class="nav-link active" data-page="dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+            <a class="nav-link" data-page="patients"><i data-lucide="users"></i> Patients</a>
+            <a class="nav-link" data-page="doctors"><i data-lucide="user-round"></i> Doctors</a>
+            <a class="nav-link" data-page="appointments"><i data-lucide="calendar-days"></i> Appointments</a>
+            <a class="nav-link" data-page="billing"><i data-lucide="receipt"></i> Billing</a>
+            <a class="nav-link" data-page="medicines"><i data-lucide="pill"></i> Medicines</a>
+            <a class="nav-link" data-page="staff"><i data-lucide="contact-round"></i> Staff</a>
+            <a class="nav-link" data-page="reports"><i data-lucide="chart-column"></i> Reports</a>
+        </nav>
+
+        
+<div class="sidebar-bottom">
+    <div class="admin-avatar" id="admin-avatar">A</div>
+
+    <div class="admin-info">
+        <strong id="admin-name">Admin</strong>
+        <small>Administrator</small>
+    </div>
+
+    <button class="action-btn delete-btn" onclick="logout()">
+        Logout
+    </button>
+</div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2 id="page-title">Dashboard</h2>
+                <p>Welcome to MediCare Hospital Management</p>
+            </div>
+            <div class="top-actions">
+                <span id="today-date"></span>
+                <div class="top-avatar" id="top-admin-avatar">A</div>
+            </div>
+        </header>
+
+        <section id="page-content"></section>
+
+        <footer>
+            © 2026 MediCare Hospital Management System
+        </footer>
+    </main>
+</div>
+
+<!-- Add / Edit Modal -->
+<div class="modal" id="record-modal">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3 id="modal-title">Add Record</h3>
+            <button class="close-btn" onclick="closeModal()">×</button>
+        </div>
+        <form id="record-form">
+            <div id="form-fields" class="form-grid"></div>
+            <div class="modal-actions">
+                <button type="button" class="btn-light" onclick="closeModal()">Cancel</button>
+                <button type="submit" class="btn-primary">Save Record</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -144,6 +144,6 @@ loginForm.addEventListener("submit", function(e) {
     showMessage("login-message", "Login successful! Opening dashboard...", "success");
 
     setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
     }, 800);
 });

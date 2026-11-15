@@ -1,4 +1,8 @@
+const activeAdmin = sessionStorage.getItem("medicare_session");
 
+if (!activeAdmin) {
+    window.location.replace("index.html");
+}
 const configs = {
     patients: {
         title: "Patients",
@@ -431,7 +435,7 @@ if (loggedAdmin) {
 function logout() {
     if (confirm("Are you sure you want to logout?")) {
         sessionStorage.removeItem("medicare_session");
-        window.location.replace("login.html");
+        window.location.replace("index.html");
     }
 }
 
